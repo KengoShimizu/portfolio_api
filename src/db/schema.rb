@@ -12,16 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_09_23_041328) do
 
-  create_table "resources", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.bigint "work_id", null: false
-    t.string "image", null: false
-    t.text "content", null: false
-    t.integer "status", limit: 1, default: 1, null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["work_id"], name: "index_resources_on_work_id"
-  end
-
   create_table "skills", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name", null: false
     t.integer "kind", limit: 1, null: false
@@ -34,7 +24,7 @@ ActiveRecord::Schema.define(version: 2020_09_23_041328) do
 
   create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "content", null: false
-    t.integer "type", limit: 1, null: false
+    t.integer "kind", limit: 1, null: false
     t.integer "status", limit: 1, default: 1, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -60,11 +50,13 @@ ActiveRecord::Schema.define(version: 2020_09_23_041328) do
     t.string "name", null: false
     t.integer "status", limit: 1, default: 1, null: false
     t.string "image", null: false
+    t.text "description", null: false
+    t.integer "member", limit: 1, null: false
+    t.string "url", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "resources", "works"
   add_foreign_key "work_tags", "tags"
   add_foreign_key "work_tags", "works"
 end

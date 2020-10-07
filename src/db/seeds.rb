@@ -143,3 +143,63 @@ skills = [
 skills.each do |i|
   Skill.create(name: i["name"], kind: i["kind"], image: i["image"], level: i["level"])
 end
+
+
+works = [
+  {
+    "index" => 1,
+    "name" => "covEAT/こびイート",
+    "image" => "/work-coveat.png",
+    "description" => "新型コロナウイルスの対策店舗を検索できるサービスです",
+    "member" => 3,
+    "url" => "https://www.coveat.work/about",
+    "tags" => [1,2,3,4,5,6]
+  }
+]
+
+works.each do |i|
+  Work.create(name: i["name"], image: i["image"], description: i["description"], member: i["member"], url: i["url"])
+end
+
+tags = [
+  # 1
+  {
+    "content" => "HTML5",
+    "kind" => 1
+  },
+  # 2
+  {
+    "content" => "CSS3",
+    "kind" => 1
+  },
+  # 3
+  {
+    "content" => "React",
+    "kind" => 2
+  },
+  # 4
+  {
+    "content" => "TypeScript",
+    "kind" => 2
+  },
+  # 5
+  {
+    "content" => "Ruby on Rails",
+    "kind" => 3
+  },
+  # 6
+  {
+    "content" => "Docker",
+    "kind" => 4
+  },
+]
+
+tags.each do |i|
+  Tag.create!(content: i["content"], kind: i["kind"], status: 1)
+end
+
+works.each do |i|
+  i["tags"].each do |j|
+    WorkTag.create!(work_id: i["index"], tag_id: j)
+  end
+end
