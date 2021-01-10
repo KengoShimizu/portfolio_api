@@ -150,10 +150,28 @@ works = [
     "index" => 1,
     "name" => "covEAT/こびイート",
     "image" => "/work-coveat.png",
-    "description" => "新型コロナウイルスの対策店舗を検索できるサービスです",
+    "description" => "新型コロナウイルスの対策店舗を検索できるサービスです。エンジニア2人、デザイナー1人の計3人で1ヶ月で作成しました。こちらのサービスは食べログやホットペッパーグルメが各店舗の新型コロナウイルスの対策内容を掲載する前にリリースしましたが、やはりユーザ数と知名度、広報において大きなビハインドがあり、幅広く使われるサービスにはなりませんでした。しかし、本開発において多くのスキルと考える力を養うことができました。",
     "member" => 3,
     "url" => "https://www.coveat.work/about",
-    "tags" => [1,2,3,4,5,6]
+    "tags" => [1,2,3,4,7,8]
+  },
+  {
+    "index" => 2,
+    "name" => "【アーチャー伝説】ヒーローデュオ募集掲示板",
+    "image" => "/work-archer.png",
+    "description" => "「アーチャー伝説」というスマホゲームアプリのマルチプレイ募集用掲示板サービスです。月間最高ページビュー数は8万に達し、nend広告掲載による月間最高収益は1000円に達しました。こちらのサービスはjsのみで動いており、サーバー側はjsフレームワークのExpressを使用しています。",
+    "member" => 1,
+    "url" => "https://archer-duo.herokuapp.com/",
+    "tags" => [1,2,3,4,5]
+  },
+  {
+    "index" => 3,
+    "name" => "Dig-U-Out",
+    "image" => "/work-diguout.png",
+    "description" => "「底辺Youtuber」と呼ばれる配信者をランダムに探すことができるサービスです。Youtubeでは登録者数の多いYoutuberがよくユーザに表示されるため、底辺Youtuberを知るきっかけはかなり限られます。そこに目をつけ、底辺Youtuberに登録を促し、ジャンルと登録者数で絞りランダムでチャンネルに訪問できるサービスを開発しました。",
+    "member" => 1,
+    "url" => "https://dig-u-out.herokuapp.com/",
+    "tags" => [1,2,3,4,6]
   }
 ]
 
@@ -184,10 +202,20 @@ tags = [
   },
   # 5
   {
-    "content" => "Ruby on Rails",
+    "content" => "Express",
     "kind" => 3
   },
   # 6
+  {
+    "content" => "Laravel",
+    "kind" => 3
+  },
+  # 7
+  {
+    "content" => "Ruby on Rails",
+    "kind" => 3
+  },
+  # 8
   {
     "content" => "Docker",
     "kind" => 4
