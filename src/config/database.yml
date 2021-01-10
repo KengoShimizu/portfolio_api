@@ -49,7 +49,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: app_name_production
-  username: app_name
-  password: <%= ENV['APP_NAME_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  url: <%= ENV['DATABASE_URL'] %>
+  database: api_db
